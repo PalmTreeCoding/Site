@@ -18,6 +18,7 @@ cache:
 script:
   - yarn build
   - echo "" -> ./out/.nojekyll
+  - echo "palmtreecoding.com" -> ./out/CNAME
 
 deploy:
   provider: pages
