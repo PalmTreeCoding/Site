@@ -13,9 +13,13 @@ export const Root = ({ children }) => (
       <Head>
 
         <link
-          href={'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext'}
+          href={'https://fonts.googleapis.com/css?family=Quicksand:300,400,700&subset=latin-ext'}
           rel={'stylesheet'}
           type={'text/css'} />
+
+        <link
+          rel={'shortcut icon'}
+          href={'/static/favicon.ico'} />
 
         <title>Palm Tree Coding</title>
 

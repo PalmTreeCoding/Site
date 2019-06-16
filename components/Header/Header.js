@@ -53,6 +53,7 @@ export const styles = theme => ({
       [theme.breakpoints.down('sm')]: {
         '& h3': {
           opacity: 0,
+          display: 'none'
         },
       },
     },

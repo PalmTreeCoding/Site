@@ -13,7 +13,7 @@ export default function createTypography(breakpoints) {
   const fontSize = 14
   const fontWeightLight = 300
   const fontWeightRegular = 400
-  const fontWeightMedium = 500
+  // const fontWeightMedium = 500 // Not used, also not imported from google fonts anymore
   const fontWeightBold = 700
   const htmlFontSize = 16
 
@@ -53,7 +53,7 @@ export default function createTypography(breakpoints) {
     fontSize,
     fontWeightLight,
     fontWeightRegular,
-    fontWeightMedium,
+    // fontWeightMedium,
     fontWeightBold,
     ...variants,
   }
