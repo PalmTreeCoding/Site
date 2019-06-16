@@ -1,0 +1,29 @@
+{
+  "name": "palmtreecoding.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:PalmTreeCoding/palmtreecoding.github.io.git",
+  "author": "Tycho Bokdam <tycho@palmtreecoding.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "prebuild": "rimraf .next",
+    "build": "next build",
+    "postbuild": "next export"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "clsx": "^1.0.4",
+    "next": "^8.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-jss": "^8.6.1",
+    "react-jss-grid": "^1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
+  }
+}
