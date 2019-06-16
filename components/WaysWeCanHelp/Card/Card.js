@@ -59,7 +59,7 @@ export const styles = theme => ({
       zIndex: 3,
 
       transition: theme.transition.create(['color']),
-      willChane: 'color',
+      willChange: 'color',
     },
 
     '& h3': {

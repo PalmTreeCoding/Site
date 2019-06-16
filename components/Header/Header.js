@@ -32,7 +32,7 @@ export const styles = theme => ({
         color: theme.palette.text.light,
 
         transition: theme.transition.create(['color']),
-        willChane: 'color',
+        willChange: 'color',
       },
     },
   },
@@ -87,7 +87,7 @@ export const styles = theme => ({
 
   contact: {
     transition: theme.transition.create(['opacity']),
-    willChane: 'opacity',
+    willChange: 'opacity',
 
     '& a': {
       fontSize: [

@@ -2,6 +2,8 @@ import React from 'react'
 import Document from 'next/document'
 import { SheetsRegistry, JssProvider } from 'react-jss'
 
+import collapseWhitespace from '../utils/collapseWhitespace'
+
 export default class JssDocument extends Document {
 
   static async getInitialProps(ctx) {
@@ -25,7 +27,9 @@ export default class JssDocument extends Document {
       styles: (
         <>
           {initialProps.styles}
-          <style id='server-side-styles'>{registry.toString()}</style>
+          <style
+            id='server-side-styles'
+            dangerouslySetInnerHTML={{ __html: collapseWhitespace(registry.toString()) }} />
         </>
       ),
     }
