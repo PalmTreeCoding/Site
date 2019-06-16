@@ -167,7 +167,9 @@ export class Header extends React.Component {
             xs={7}
             sm={9}
             className={classes.company}>
-            <img src="/static/images/logo.png" />
+            <img
+              src={'/static/images/logo.png'}
+              alt={'Palm Tree Coding Logo'} />
 
             <Typography
               color={'textPrimary'}

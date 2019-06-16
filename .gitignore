@@ -2,4 +2,5 @@
 .next
 node_modules
 out
-components/Clients
+components/Clients/**
+static/images/clients

@@ -15,6 +15,7 @@ export const Client = ({ title, description, image }) => (
     md={3}>
 
     <img
+      alt={`Client ${title}`}
       width={100}
       src={image} />
 
