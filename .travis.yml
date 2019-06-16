@@ -3,6 +3,10 @@ language: node_js
 node_js:
   - "10"
 
+branches:
+  only:
+    - master
+
 install:
   - yarn
 
@@ -13,6 +17,7 @@ cache:
 
 script:
   - yarn build
+  - echo "" -> ./out/.nojekyll
 
 deploy:
   provider: pages
