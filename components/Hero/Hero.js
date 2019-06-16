@@ -46,6 +46,7 @@ export const styles = theme => ({
     [theme.breakpoints.down('md')]: {
       position: 'relative',
       width: '100%',
+      height: 'inherit',
     },
   },
 
