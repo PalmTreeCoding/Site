@@ -22,16 +22,6 @@ export const styles = theme => ({
     overflow: 'hidden',
     zIndex: 1,
 
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      opacity: 0.5,
-      backgroundImage: theme.palette.gradient,
-      zIndex: 1000,
-    },
-
     '& video': {
       position: 'relative',
       objectFit: 'cover',
@@ -49,6 +39,15 @@ export const styles = theme => ({
       height: 'inherit',
     },
   },
+
+    overlay: {
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      opacity: 0.5,
+      backgroundImage: theme.palette.gradient,
+      zIndex: 1000,
+    },
 
   hexagon: {
     position: 'relative',
@@ -86,6 +85,7 @@ export const Hero = ({ classes }) => (
       item
       xs={12}
       className={classes.rightSide}>
+      <div className={classes.overlay} />
       <video
         loop
         autoPlay
@@ -99,7 +99,9 @@ export const Hero = ({ classes }) => (
       xs={12}
       component={Grid}
       className={classes.hexagon}>
-      <img src={'/static/images/header-bg.svg'} />
+      <img
+        src={'/static/images/header-bg.svg'}
+        alt={'Header BG'} />
     </Hidden>
 
     <Container
