@@ -62,7 +62,7 @@ export const WaysWeCanHelp = ({ classes }) => (
       />
 
       <Card
-        title={'Hire a expert'}
+        title={'Hire an expert'}
         description={'Hire us to work directly within your team, building and educating on the go.'}
         icon={faFileContract}
       />
