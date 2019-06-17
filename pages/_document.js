@@ -1,38 +1,30 @@
 import React from 'react'
-import Document from 'next/document'
-import { SheetsRegistry, JssProvider } from 'react-jss'
+import { Main} from 'next/document'
 
-import collapseWhitespace from '../utils/collapseWhitespace'
+import CustomHead from '../modules/CustomHead'
+import JssDocument from '../modules/JssDocument'
 
-export default class JssDocument extends Document {
+/**
+ * Renders a static document without any of the next / js / css scripts
+ */
+class StaticDocument extends JssDocument {
 
-  static async getInitialProps(ctx) {
-    const registry = new SheetsRegistry()
-    const originalRenderPage = ctx.renderPage
+  render() {
+    return (
+      <html>
+      <CustomHead />
 
-    ctx.renderPage = () => (
-      originalRenderPage({
-        enhanceApp: App => props => (
-          <JssProvider registry={registry}>
-            <App {...props} />
-          </JssProvider>
-        ),
-      })
+      <body>
+      <Main />
+      </body>
+
+      </html>
     )
-
-    const initialProps = await Document.getInitialProps(ctx)
-
-    return {
-      ...(initialProps || {}),
-      styles: (
-        <>
-          {initialProps.styles}
-          <style
-            id='server-side-styles'
-            dangerouslySetInnerHTML={{ __html: collapseWhitespace(registry.toString()) }} />
-        </>
-      ),
-    }
   }
-
 }
+
+/**
+ * In production we only need a static page, for development we need everything
+ */
+export default process.env.NODE_ENV === 'production' ? StaticDocument : JssDocument
+
